@@ -1,0 +1,136 @@
+{
+  "data": {
+    "cities": [
+      "Ahmedabad",
+      "Surat",
+      "Rajkot",
+      "Vadodara",
+      "Bhuj"
+    ],
+    "first_year": 1984,
+    "last_year": 2024,
+    "n_years": 41,
+    "city_months_modelled": 2460
+  },
+  "assumptions": {
+    "system_kw": 3.0,
+    "performance_ratio": 0.77,
+    "tariff_inr_per_unit": 6.0,
+    "trigger": 0.85,
+    "exit": 0.6,
+    "risk_load": 0.25,
+    "expense_ratio": 0.2,
+    "n_sims": 100000
+  },
+  "generation": {
+    "avg_annual_kwh_per_policy": 4651.612115337805,
+    "kwh_per_kw_per_day": 4.245139963803609
+  },
+  "burn": {
+    "burn_cost_inr_per_policy": 26.327643396692437,
+    "share_of_years_with_any_payout": 0.34146341463414637,
+    "riskiest_months": {
+      "Aug": 0.09268292682926829,
+      "Jul": 0.07317073170731707,
+      "Sep": 0.06341463414634148
+    }
+  },
+  "pricing": {
+    "expected_loss_inr": 24.698495045202765,
+    "loss_std_inr": 63.79121608145806,
+    "gross_premium_inr": 50.80787383195909,
+    "premium_per_kw_inr": 16.935957943986363,
+    "max_annual_payout_inr": 6977.4181730067085,
+    "premium_by_city_inr": {
+      "Ahmedabad": 58.07285794156589,
+      "Surat": 59.81501262722084,
+      "Rajkot": 40.061489678999166,
+      "Vadodara": 69.16158680383086,
+      "Bhuj": 22.892725233270802
+    },
+    "return_period_payouts_inr": {
+      "1_in_10": 94.44018971647799,
+      "1_in_25": 184.46154836143842,
+      "1_in_100": 308.4496616065805
+    }
+  },
+  "model_checks": {
+    "lag1_autocorr_of_monthly_ratio": 0.4152429284325011,
+    "city_months_failing_normality_p05": 23,
+    "city_months_tested": 60,
+    "mc_vs_burn_gap_pct": -6.187976367434174
+  },
+  "trigger_sensitivity": [
+    {
+      "trigger": 0.8,
+      "expected_loss_inr": 8.243093282446331,
+      "gross_premium_inr": 21.46136801669777,
+      "premium_per_kw_inr": 7.153789338899256,
+      "hist_payout_freq_monthly": 0.00853658536585366
+    },
+    {
+      "trigger": 0.85,
+      "expected_loss_inr": 25.231083216002084,
+      "gross_premium_inr": 51.880408540205316,
+      "premium_per_kw_inr": 17.29346951340177,
+      "hist_payout_freq_monthly": 0.026829268292682926
+    },
+    {
+      "trigger": 0.9,
+      "expected_loss_inr": 72.41830007799088,
+      "gross_premium_inr": 125.5641844026524,
+      "premium_per_kw_inr": 41.85472813421747,
+      "hist_payout_freq_monthly": 0.06544715447154471
+    }
+  ],
+  "portfolio": {
+    "policies": 10000,
+    "annual_premium_inr": 508078.7383195909,
+    "expected_loss_inr": 246984.95045202767,
+    "expected_loss_ratio": 0.48611550105186563,
+    "loss_1_in_200_inr": 3015531.314580766,
+    "capital_needed_1_in_200_inr": 2609068.3239250933,
+    "prob_loss_ratio_above_100pct": 0.15706,
+    "hist_loss_ratio_mean": 0.5181803805403851,
+    "hist_loss_ratio_worst": 5.470921568215542,
+    "hist_worst_year": 2021
+  },
+  "diversification_vs_rainfall_cover": {
+    "Ahmedabad": {
+      "pearson_r": -0.19658585863600442,
+      "pearson_p": 0.2179865928843937,
+      "spearman_rho": -0.2401355114031304,
+      "spearman_p": 0.13045949459329778
+    },
+    "Bhuj": {
+      "pearson_r": -0.09199290315220725,
+      "pearson_p": 0.5672942742337218,
+      "spearman_rho": -0.11222675122990013,
+      "spearman_p": 0.48480792089430147
+    },
+    "Rajkot": {
+      "pearson_r": -0.2023651858394946,
+      "pearson_p": 0.2044861627143265,
+      "spearman_rho": -0.331603629266989,
+      "spearman_p": 0.03417741478789021
+    },
+    "Surat": {
+      "pearson_r": -0.24065220954994834,
+      "pearson_p": 0.12960901239920972,
+      "spearman_rho": -0.37638189731171,
+      "spearman_p": 0.015290496833574349
+    },
+    "Vadodara": {
+      "pearson_r": -0.2536164229327236,
+      "pearson_p": 0.1095985849100399,
+      "spearman_rho": -0.331603629266989,
+      "spearman_p": 0.03417741478789021
+    },
+    "Gujarat_pooled": {
+      "pearson_r": -0.26616708255177207,
+      "pearson_p": 0.09255128256305721,
+      "spearman_rho": -0.4201373661456032,
+      "spearman_p": 0.006241225041381884
+    }
+  }
+}
